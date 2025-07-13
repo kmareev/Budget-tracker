@@ -17,6 +17,8 @@ form.addEventListener("submit", async (e) => {
     body: JSON.stringify(data)
   });
   form.reset();
+  categorySelect.innerHTML = `<option value="" disabled selected>Select type first</option>`;
+  categorySelect.disabled = true;
   loadTransactions();
 });
 
@@ -79,3 +81,41 @@ function renderChart(transactions) {
 }
 
 loadTransactions();
+
+const typeSelect = document.getElementById("type");
+const categorySelect = document.getElementById("category");
+
+const CATEGORIES = {
+  income: ["Salary", "Freelance", "Investment", "Business", "Other Income"],
+  expense: [
+    "Groceries",
+    "Rent",
+    "Utilities",
+    "Transportation",
+    "Entertainment",
+    "Healthcare",
+    "Shopping",
+    "Dining",
+    "Other Expense"
+  ]
+};
+
+// Update categories when type changes
+typeSelect.addEventListener("change", () => {
+  const selectedType = typeSelect.value;
+  const options = CATEGORIES[selectedType];
+
+  // Clear existing options
+  categorySelect.innerHTML = `<option value="" disabled selected>Select category</option>`;
+
+  // Populate relevant categories
+  options.forEach(cat => {
+    const option = document.createElement("option");
+    option.value = cat;
+    option.textContent = cat;
+    categorySelect.appendChild(option);
+  });
+
+  // Enable the dropdown
+  categorySelect.disabled = false;
+});

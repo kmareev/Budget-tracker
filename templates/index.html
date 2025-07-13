@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>Budget Tracker</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
-    <h1>Budget Tracker</h1>
+    <h1>Budget Tracker 💵 </h1>
     
     <div id="summary">
       <p>Total Income: $<span id="income">0</span></p>
@@ -22,7 +22,10 @@
         <option value="expense">Expense</option>
       </select>
       <input type="date" id="date" required />
-      <input type="text" id="category" placeholder="Category" required />
+      <select id="category" required>
+        <option value="" disabled selected>Select type first</option>
+      </select>      
+      
       <button type="submit">Add</button>
     </form>
 
