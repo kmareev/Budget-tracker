@@ -27,21 +27,6 @@ A full-stack budget tracker that helps users manage income and expenses with dyn
 
 ---
 
-## 📦 Installation (Local)
-
-```bash
-git clone https://github.com/yourusername/budget-tracker.git
-cd budget-tracker
-
-python3 -m venv venv
-source venv/bin/activate
-
-pip install -r requirements.txt
-
-python app.py
-
----
-
 ## 🧪 CI/CD with GitHub Actions 
 
 This project includes a GitHub Actions workflow that:
