@@ -55,7 +55,7 @@ This project includes a GitHub Actions workflow that:
 
 ---
 
-##👩🏻‍💻 Author
+## 👩🏻‍💻 Author
 - Krisha Valencia
 - 💼 Ex-HR turned coder
 - 📍 Based in Sydney
